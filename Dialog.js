@@ -1,10 +1,10 @@
-function Diglog(options) {
+function Dialog(options) {
   this.options = options
   this.$dialog = $(this.getTemplate())
   this.$dialog.find('footer').append(this.generateBtn())
 }
 
-Diglog.prototype.generateBtn = function () {
+Dialog.prototype.generateBtn = function () {
   let { buttons } = this.options
   buttons = buttons.map((buttonOption) => {
     var $b = $('<button></button>')
@@ -15,7 +15,7 @@ Diglog.prototype.generateBtn = function () {
   return buttons
 }
 
-Diglog.prototype.getTemplate = function () {
+Dialog.prototype.getTemplate = function () {
   var title = this.options.title
   var content = this.options.content
   var htmlStr = `
@@ -28,10 +28,10 @@ Diglog.prototype.getTemplate = function () {
   return htmlStr
 }
 
-Diglog.prototype.close = function () {
+Dialog.prototype.close = function () {
   this.$dialog.detach()
 }
 
-Diglog.prototype.open = function () {
+Dialog.prototype.open = function () {
   this.$dialog.prependTo('body')
 }
