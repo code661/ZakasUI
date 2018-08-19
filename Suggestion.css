@@ -1,0 +1,35 @@
+.ZakasSuggestion {
+  position: relative;
+  display: inline-block;
+}
+
+.ZakasSuggestion-loading {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.ZakasSuggestion-list {
+  position: absolute;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.ZakasSuggestion.loading .ZakasSuggestion-loading {
+  display: block;
+}
+
+.ZakasSuggestion.loading .ZakasSuggestion-list {
+  display: none;
+}
+
+.ZakasSuggestion-empty {
+  display: none
+}
+
+.ZakasSuggestion.empty .ZakasSuggestion-empty {
+  display: block;
+}
