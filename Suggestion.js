@@ -58,21 +58,3 @@ class Suggestion {
     })
   }
 }
-
-var s = new Suggestion({
-  input: '.input',
-  search: function (text, callback) {
-    if (text === '0'){
-      setTimeout(()=>{callback([])}, 300)
-      return
-    }
-    arr = []
-    for (var i = 0; i < 5; i++) {
-      var n = parseInt(Math.random() * 100, 10)
-      arr.push(text + n)
-    }
-    setTimeout(() => { callback(arr) }, 300)
-  },
-  loading: '正在加载',
-  emptyHint: '没找到结果'
-})
