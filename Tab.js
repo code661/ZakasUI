@@ -20,5 +20,3 @@ Tab.prototype.bindEvents = function () {
     $content.eq(idx).addClass('active').siblings().removeClass()
   })
 }
-
-var tab = new Tab('.tabs')
