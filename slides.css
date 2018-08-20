@@ -1,0 +1,25 @@
+.zakas-slides {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+}
+.zakas-slides .prev{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%)
+}
+.zakas-slides .next{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%)
+}
+.zakas-slides > ol{
+  display: flex;
+  list-style: none;
+  transition: all 0.5s;
+}
+.zakas-slides > ol img{
+  vertical-align: top;
+}
