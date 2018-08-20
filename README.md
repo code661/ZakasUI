@@ -49,3 +49,23 @@ new Tab('.tabs')
 new Sticky(selector,val)
 ```
 第一参数为需要设置为 Sticky 的元素选择器，第二个参数为距离视窗顶部的高度值
+
+### Slides 组件
+1. HTML
+```html
+<div class="slides">
+  <ol>
+    <li><img src="https://picsum.photos/500/400/?image=008" alt=""></li>
+    <li><img src="https://picsum.photos/500/400/?image=020" alt=""></li>
+    <li><img src="https://picsum.photos/500/400/?image=010" alt=""></li>
+  </ol>
+</div>
+```
+2. 引入 CSS 文件 `slides.css`
+3. JavaScript 代码
+```js
+var slides = new Slides({
+  element: '.slides',
+  autoPlay: true
+})
+```
