@@ -8,6 +8,7 @@
 * Dialog 组件
 * Suggestion 组件
 * Slides 组件
+* 拖拽组件
 
 ## 使用
 内部实现依赖于 jQuery 库，在使用前需安装 jQuery
@@ -68,4 +69,14 @@ var slides = new Slides({
   element: '.slides',
   autoPlay: true
 })
+```
+
+### 拖拽组件
+1. 导入 JavaScript 文件
+```html
+<script src='https://raw.githubusercontent.com/code661/ZakasUI/master/Drag.js'></script>
+```
+2. 使用实例
+```js
+var drag = new Drag('.elem1')
 ```
