@@ -1,7 +1,7 @@
 ;
 (function () {
-  function Drag(selecotr) {
-    this.elem = typeof selecotr === 'Object' ? selecotr : document.querySelector(selecotr)
+  function Drag(selector) {
+    this.elem = typeof selector === 'object' ? selector : document.querySelector(selector)
     this.startX = 0
     this.startY = 0
     this.sourceX = 0
