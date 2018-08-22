@@ -76,7 +76,13 @@ var slides = new Slides({
 ```html
 <script src='https://raw.githubusercontent.com/code661/ZakasUI/master/Drag.js'></script>
 ```
-2. 使用实例
+2. 使用示例
+给构造函数传入字符传
 ```js
-var drag = new Drag('.elem1')
+var drag = new Drag('.drag-element')
+```
+或者传入 DOM 对象
+```js
+var elem = document.querySelector('.drag-element')
+var drag = new Drag(elem)
 ```
