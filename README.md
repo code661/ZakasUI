@@ -9,6 +9,7 @@
 * Suggestion 组件
 * Slides 组件
 * 拖拽组件
+* EventHub 组件
 
 ## 使用
 内部实现依赖于 jQuery 库，在使用前需安装 jQuery
@@ -86,3 +87,57 @@ var drag = new Drag('.drag-element')
 var elem = document.querySelector('.drag-element')
 var drag = new Drag(elem)
 ```
+
+### 事件中心（EventHub）
+
+学习和理解 Redux 的过程中，先理解事件中心的方案实现组件通讯。
+代码照抄了 [mqyqingfeng/EventEmitter: 一个简单的 EventEmitter，可在浏览器中使用，帮助你实现事件的订阅和发布。](https://github.com/mqyqingfeng/EventEmitter)
+
+```js
+var emitter = new EventEmitter();
+```
+
+#### on
+
+添加一个事件监听器，支持链式调用
+
+```js
+emitter.on(eventName, listener)
+```
+
+* eventName 事件名称
+* listener 监听器函数
+
+#### off
+
+删除一个事件监听器，支持链式调用
+
+```js
+emitter.off(eventName, listener)
+```
+
+* eventName 事件名称
+* listener 监听器函数
+
+#### once
+
+添加一个只能触发一次的事件监听器，支持链式调用
+
+```js
+emitter.once(eventName, listener)
+```
+
+* eventName 事件名称
+* listener 监听器函数
+
+#### emit
+
+触发事件，支持链式调用
+
+```js
+emitter.emit(eventName, args)
+```
+
+* eventName 事件名称
+* arg 数组形式，传入事件监听器的参数
+
